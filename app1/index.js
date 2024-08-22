@@ -12,6 +12,7 @@ app.get('/api/get1',(req,res)=>{
 
 app.get('/api/users', async (req, res) => {
     try {
+      // transfer request endpoint /api/get2  in conatainer app2.  
       const response = await axios.get('http://app2:3000/api/get2');
       res.json(response.data);
     } catch (error) {
